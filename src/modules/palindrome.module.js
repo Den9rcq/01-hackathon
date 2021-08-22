@@ -1,9 +1,7 @@
-"use strict";
-
 import { Module } from "../core/module";
 import { getArea, isPalindrome, createModal } from "../utils";
 
-export class IsPalindromeModule extends Module {
+export default class IsPalindromeModule extends Module {
 	#area;
 	#modal;
 	#form;
