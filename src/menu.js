@@ -14,7 +14,7 @@ export default class ContextMenu extends Menu {
     const elem = this.el.querySelector(".menu-item");
     elem.addEventListener("click", () => {
       const area = getArea();
-      area.innerHTML = ``;
+      area.innerHTML = "";
       if (document.querySelector(".help-list")) {
         document.querySelector(".help-list").remove();
       }

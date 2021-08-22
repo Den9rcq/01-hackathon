@@ -30,28 +30,28 @@ export default class WeatherModule extends Module {
 
 		const statusWeather = document.createElement("p");
 		statusWeather.className = "statusWeather";
-		statusWeather.textContent = `Погода:`;
+		statusWeather.textContent = "Погода:";
 		const statusWeatherSpan = document.createElement("span");
 		statusWeatherSpan.textContent = `${data.weather[0].description}`;
 		statusWeather.append(statusWeatherSpan);
 
 		const temperatureWeather = document.createElement("p");
 		temperatureWeather.className = "temperatureWeather";
-		temperatureWeather.textContent = `Температура:`;
+		temperatureWeather.textContent = "Температура:";
 		const temperatureWeatherSpan = document.createElement("span");
 		temperatureWeatherSpan.textContent = `${data.main.temp} °C`;
 		temperatureWeather.append(temperatureWeatherSpan);
 
 		const humidityWeather = document.createElement("p");
 		humidityWeather.className = "humidityWeather";
-		humidityWeather.textContent = `Влажность:`;
+		humidityWeather.textContent = "Влажность:";
 		const humidityWeatherSpan = document.createElement("span");
 		humidityWeatherSpan.textContent = `${data.main.humidity} %`;
 		humidityWeather.append(humidityWeatherSpan);
 
 		const windWeather = document.createElement("p");
 		windWeather.className = "windWeather";
-		windWeather.textContent = `Ветер:`;
+		windWeather.textContent = "Ветер:";
 		const windWeatherSpan = document.createElement("span");
 		windWeatherSpan.textContent = `${data.wind.speed} км/ч`;
 		windWeather.append(windWeatherSpan);
@@ -78,7 +78,7 @@ export default class WeatherModule extends Module {
 
 			WeatherModule.#getWeatherData(inputField.value).then((response) => {
 				if (response.code === 404) return;
-				this.#modal.style.width = `350px`;
+				this.#modal.style.width = "350px";
 				const data = response;
 				setTimeout(() => {
 					this.#getWeatherMarkup(
@@ -120,7 +120,7 @@ export default class WeatherModule extends Module {
 
 	#getStarterWindow() {
 		this.#modal = createModal("weather-modal");
-		this.#modal.style.width = `220px`;
+		this.#modal.style.width = "220px";
 
 		this.#form.className = "starterWeatherMarkup";
 

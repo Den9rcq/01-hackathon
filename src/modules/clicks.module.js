@@ -7,7 +7,7 @@ export default class ClicksModule extends TimerInterface {
     }
 
     startProcess(text) {
-        window.addEventListener('click', counterIncrement);
+        window.addEventListener("click", counterIncrement);
         this.timerControlOn(text);
     }
 
@@ -17,7 +17,7 @@ export default class ClicksModule extends TimerInterface {
     }
 
     finishProcess() {
-        window.removeEventListener('click', counterIncrement);
+        window.removeEventListener("click", counterIncrement);
         this.timerControlOf();
         ClicksModule.#showResult();
         refreshCounter();
@@ -25,6 +25,6 @@ export default class ClicksModule extends TimerInterface {
     }
 
     trigger() {
-        this.initiateTimer(this.type, 'Create Clicker Timer');
+        this.initiateTimer(this.type, "Create Clicker Timer");
     }
 }

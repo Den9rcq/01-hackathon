@@ -15,6 +15,6 @@ export default class TimerModule extends TimerInterface {
   }
 
   trigger() {
-    this.initiateTimer(this.type, 'Create Timer');
+    this.initiateTimer(this.type, "Create Timer");
   }
 }

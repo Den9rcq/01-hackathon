@@ -9,7 +9,7 @@ export default class CustomMessageModule extends Module {
   static async #getQuote() {
     try {
       const num = random(0, 1);
-      const url = num > 0.5 ? 'https://favqs.com/api/qotd' : 'https://api.chucknorris.io/jokes/random';
+      const url = num > 0.5 ? "https://favqs.com/api/qotd" : "https://api.chucknorris.io/jokes/random";
       const response = await fetch(url);
       // if (!response.ok) {
       //   throw new Error(`status isn't ok`);
@@ -17,7 +17,7 @@ export default class CustomMessageModule extends Module {
       const responseObj = await response.json();
       return {
         body: `${num > 0.5 ? responseObj?.quote.body : responseObj.value}`,
-        author: `${num > 0.5 ? responseObj?.quote.author : 'Chuck Norris'}`,
+        author: `${num > 0.5 ? responseObj?.quote.author : "Chuck Norris"}`,
       };
     } catch (error) {
       showError(error);

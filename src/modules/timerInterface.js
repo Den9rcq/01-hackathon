@@ -18,8 +18,8 @@ export class TimerInterface extends Module {
     #createRestartButton() {
         this.#restartButton = document.createElement("button");
         this.#restartButton.classList.add("timer_start-button");
-        this.#restartButton.value = 'Restart';
-        this.#restartButton.textContent = 'Restart';
+        this.#restartButton.value = "Restart";
+        this.#restartButton.textContent = "Restart";
         this.#restartButton.addEventListener("click", () => {
             this.#timerSettings();
         });
@@ -40,13 +40,13 @@ export class TimerInterface extends Module {
 
     restart() {
         this.#clearWrapperField();
-        this.#generateTitle('Want to restart?');
+        this.#generateTitle("Want to restart?");
         this.#createRestartButton();
     }
 
     static #prettyTime(timeLeft) {
-        let part1 = '';
-        let part2 = '00';
+        let part1 = "";
+        let part2 = "00";
         if (timeLeft > 60) {
             const minutes = Math.floor(timeLeft / 60);
             part1 = minutes < 10 ? `0${minutes}:` : `${minutes}`;
@@ -66,7 +66,7 @@ export class TimerInterface extends Module {
 
     timerControlOf() {
         clearInterval(this.intervalId);
-        new Audio('http://www.yogatech.com/apps/livehelp/bin/staff/sound/ringring.wav').play()
+        new Audio("http://www.yogatech.com/apps/livehelp/bin/staff/sound/ringring.wav").play()
             .then()
             .catch(err => console.error(err));
     }

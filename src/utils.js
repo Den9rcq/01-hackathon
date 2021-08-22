@@ -50,7 +50,7 @@ export function createModal(modalId) {
 
   const modalCloseButton = document.createElement("button");
   modalCloseButton.classList.add("modal_close-button");
-  modalCloseButton.textContent = `\u2716`;
+  modalCloseButton.textContent = "\u2716";
 
   modalCloseButton.addEventListener("click", () => {
     const modal = document.querySelector(`#${modalId}`);
