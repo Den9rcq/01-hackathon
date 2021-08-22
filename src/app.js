@@ -60,6 +60,7 @@ const weatherModule = new WeatherModule("weatherModule", "Weather forecast");
 const beLikeBill = new BeLikeBillModule("beLikeBillModule", "Generate Bill meme");
 
 // add modules to contextMenu
+contextMenu.add(beLikeBill);
 contextMenu.add(clickModule);
 contextMenu.add(backgroundModule);
 contextMenu.add(randomSound);
@@ -69,4 +70,3 @@ contextMenu.add(shapeModule);
 contextMenu.add(customMessage);
 contextMenu.add(createMusic);
 contextMenu.add(timer);
-contextMenu.add(beLikeBill);
